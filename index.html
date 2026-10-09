@@ -225,7 +225,7 @@ footer strong { color: var(--gold); }
 <section id="booking">
   <div class="section-title">
     <h2>Book Your Haircut</h2>
-    <p>Enter your details and send your booking request on WhatsApp.</p>
+    <p>Enter your details to submit a booking request.</p>
   </div>
 
   <form class="form-card" id="bookingForm">
@@ -269,7 +269,7 @@ footer strong { color: var(--gold); }
     <div class="total">Total: <span id="totalPrice">₹120</span></div>
 
     <button class="btn whatsapp" type="submit">
-      Send Booking on WhatsApp
+      Submit Booking
     </button>
     <p class="note">
       This sends a booking request, not an automatic confirmation.
@@ -421,18 +421,15 @@ function chooseService(service) {
 }
 
 document.getElementById("bookingForm").addEventListener(
-  "submit", function(event) {
+  "submit", async function(event) {
     event.preventDefault();
 
-    const name = document.getElementById("customerName")
-      .value.trim();
-    const phone = document.getElementById("customerPhone")
-      .value.trim();
+    const name = document.getElementById("customerName").value.trim();
+    const phone = document.getElementById("customerPhone").value.trim();
     const service = serviceSelect.value;
     const date = bookingDate.value;
     const time = document.getElementById("bookingTime").value;
-    const notes = document.getElementById("bookingNotes")
-      .value.trim();
+    const notes = document.getElementById("bookingNotes").value.trim();
 
     if (!name || !phone || !date || !time) {
       alert("Please fill in all required fields.");
@@ -449,22 +446,43 @@ document.getElementById("bookingForm").addEventListener(
       return;
     }
 
-    const message =
-      "Hello B.TECH-SALOON WALA!%0A%0A" +
-      "*New Haircut Booking Request*%0A" +
-      "Name: " + encodeURIComponent(name) + "%0A" +
-      "Customer Phone: " + encodeURIComponent(phone) + "%0A" +
-      "Service: " + encodeURIComponent(serviceNames[service]) + "%0A" +
-      "Price: ₹" + prices[service] + "%0A" +
-      "Preferred Date: " + encodeURIComponent(date) + "%0A" +
-      "Preferred Time: " + encodeURIComponent(time) + "%0A" +
-      "Room: 177%0A" +
-      "Notes: " + encodeURIComponent(notes || "None");
+    const submitButton = document.querySelector('#bookingForm button[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.textContent : "Submit Booking";
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+    }
 
-    window.open(
-      "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + message,
-      "_blank"
-    );
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbzuhRYz0hxwjB0Hy1Qqi6M5xHVZCvxLKZrd1GRg7bProcujYKdtDKOaSHawN-DF-W_bUA/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({
+            name: name,
+            phone: phone,
+            service: serviceNames[service],
+            date: date,
+            time: time,
+            notes: notes
+          })
+        }
+      );
+
+      alert("Booking request sent. Please check the Google Sheet to confirm it was saved.");
+      document.getElementById("bookingForm").reset();
+      updatePrice();
+      setMinimumDate();
+    } catch (error) {
+      alert("Could not send the booking request. Please try again.");
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
+    }
   }
 );
 
