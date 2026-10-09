@@ -4,174 +4,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>B.TECH-SALOON WALA | Hostel Haircuts</title>
-
 <style>
-:root {
-  --bg: #0b1120;
-  --card: #151f32;
-  --gold: #f5b942;
-  --white: #f8fafc;
-  --muted: #a9b5c8;
-  --green: #20c878;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--white);
-  line-height: 1.6;
-}
-header {
-  background: linear-gradient(135deg, #111827, #273b59);
-  padding: 18px 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #334155;
-}
-.logo { color: var(--gold); font-weight: bold; font-size: 21px; }
-nav { display: flex; gap: 15px; flex-wrap: wrap; }
-nav a { color: white; text-decoration: none; font-size: 14px; }
-nav a:hover { color: var(--gold); }
-
-.hero {
-  padding: 75px 20px;
-  text-align: center;
-  background:
-    linear-gradient(#0b1120df, #0b1120ef),
-    url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1500&q=85")
-    center/cover;
-}
-.tag {
-  color: var(--gold);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-}
-h1 { font-size: clamp(30px, 5vw, 52px); line-height: 1.2; }
-.hero p { color: var(--muted); }
-.btn {
-  display: inline-block;
-  border: 0;
-  border-radius: 9px;
-  padding: 13px 20px;
-  margin: 7px 4px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 14px;
-}
-.primary { background: var(--gold); color: #111827; }
-.whatsapp { background: var(--green); color: #062b19; }
-.secondary { background: #27364e; color: white; }
-section { padding: 55px 6%; scroll-margin-top: 20px; }
-.section-title { text-align: center; margin-bottom: 30px; }
-.section-title h2 { font-size: 30px; margin-bottom: 5px; }
-.section-title p { color: var(--muted); }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-  max-width: 1100px;
-  margin: auto;
-}
-.card {
-  background: var(--card);
-  border: 1px solid #29364c;
-  border-radius: 15px;
-  overflow: hidden;
-}
-.card-content { padding: 20px; }
-.card h3 { margin-top: 0; }
-.card p { color: var(--muted); }
-.price { color: var(--gold); font-size: 25px; font-weight: bold; }
-.hair-photo {
-  width: 100%;
-  height: 210px;
-  object-fit: cover;
-  display: block;
-  background: #27364e;
-}
-form { max-width: 650px; margin: auto; }
-.form-card {
-  padding: 25px;
-  background: var(--card);
-  border: 1px solid #29364c;
-  border-radius: 15px;
-}
-label { display: block; margin: 14px 0 5px; font-size: 14px; }
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #3a4a63;
-  background: #0b1120;
-  color: white;
-  font: inherit;
-}
-input:focus, select:focus, textarea:focus {
-  outline: 2px solid var(--gold);
-}
-.total {
-  color: var(--gold);
-  font-size: 21px;
-  font-weight: bold;
-  margin: 18px 0;
-}
-.note { font-size: 12px; color: var(--muted); }
-.center { text-align: center; }
-.stars { color: var(--gold); font-size: 22px; }
-.review { padding: 18px; border-bottom: 1px solid #334155; }
-.review p { color: var(--muted); }
-.map-frame {
-  width: 100%;
-  height: 320px;
-  border: 0;
-  border-radius: 14px;
-}
-.qr-box { text-align: center; max-width: 600px; margin: auto; }
-#qrImage {
-  width: 220px;
-  height: 220px;
-  display: none;
-  margin: 20px auto;
-  padding: 10px;
-  background: white;
-  border-radius: 12px;
-}
-footer {
-  text-align: center;
-  padding: 30px 15px;
-  background: #080d18;
-  color: var(--muted);
-}
-footer strong { color: var(--gold); }
-@media (max-width: 600px) {
-  header { justify-content: center; }
-  nav { justify-content: center; }
-  section { padding: 42px 5%; }
-  .hero { padding: 55px 15px; }
-}
+:root{--bg:#0b1120;--card:#151f32;--gold:#f5b942;--white:#f8fafc;--muted:#a9b5c8;--green:#20c878}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--white);line-height:1.6}
+header{background:linear-gradient(135deg,#111827,#273b59);padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid #334155}
+.logo{color:var(--gold);font-weight:bold;font-size:21px}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:var(--gold)}
+.hero{padding:75px 20px;text-align:center;background:linear-gradient(#0b1120df,#0b1120ef),url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1500&q=85") center/cover}
+.tag{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px}
+h1{font-size:clamp(30px,5vw,52px);line-height:1.2}
+.hero p{color:var(--muted)}
+.btn{display:inline-block;border:0;border-radius:9px;padding:13px 20px;margin:7px 4px;font-weight:bold;cursor:pointer;text-decoration:none;font-size:14px}
+.primary{background:var(--gold);color:#111827}
+.whatsapp{background:var(--green);color:#062b19}
+.secondary{background:#27364e;color:white}
+section{padding:55px 6%;scroll-margin-top:20px}
+.section-title{text-align:center;margin-bottom:30px}
+.section-title h2{font-size:30px;margin-bottom:5px}
+.section-title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;max-width:1100px;margin:auto}
+.card{background:var(--card);border:1px solid #29364c;border-radius:15px;overflow:hidden}
+.card-content{padding:20px}
+.card h3{margin-top:0}
+.card p{color:var(--muted)}
+.price{color:var(--gold);font-size:25px;font-weight:bold}
+.hair-photo{width:100%;height:210px;object-fit:cover;display:block;background:#27364e}
+form{max-width:650px;margin:auto}
+.form-card{padding:25px;background:var(--card);border:1px solid #29364c;border-radius:15px}
+label{display:block;margin:14px 0 5px;font-size:14px}
+input,select,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #3a4a63;background:#0b1120;color:white;font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold)}
+.total{color:var(--gold);font-size:21px;font-weight:bold;margin:18px 0}
+.note{font-size:12px;color:var(--muted)}
+.center{text-align:center}
+.stars{color:var(--gold);font-size:22px}
+.review{padding:18px;border-bottom:1px solid #334155}
+.review p{color:var(--muted)}
+.map-frame{width:100%;height:320px;border:0;border-radius:14px}
+.qr-box{text-align:center;max-width:600px;margin:auto}
+#qrImage{width:220px;height:220px;display:none;margin:20px auto;padding:10px;background:white;border-radius:12px}
+footer{text-align:center;padding:30px 15px;background:#080d18;color:var(--muted)}
+footer strong{color:var(--gold)}
+.whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:9999;width:60px;height:60px;border-radius:50%;background:#25D366;color:#062b19;display:flex;align-items:center;justify-content:center;font-size:29px;font-weight:bold;text-decoration:none;box-shadow:0 4px 12px #0006}
+.whatsapp-float:hover{transform:scale(1.08)}
+@media(max-width:600px){header{justify-content:center}nav{justify-content:center}section{padding:42px 5%}.hero{padding:55px 15px}}
 </style>
 </head>
-
 <body>
-
+<a class="whatsapp-float" href="https://wa.me/919304380290?text=Hello%20B.TECH-SALOON%20WALA%2C%20I%20want%20to%20ask%20about%20a%20haircut." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">☏</a>
 <header>
   <div class="logo">✂ B.TECH-SALOON WALA</div>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#booking">Booking</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#location">Location</a>
+    <a href="#home">Home</a><a href="#services">Services</a><a href="#booking">Booking</a><a href="#reviews">Reviews</a><a href="#location">Location</a>
   </nav>
 </header>
-
 <main>
 <section class="hero" id="home">
   <div class="tag">Hostel Barber Service</div>
@@ -179,434 +69,159 @@ footer strong { color: var(--gold); }
   <p>Your Perfect Haircut, Right at Your Hostel!</p>
   <p>Convenient haircuts for SRM hostel students.</p>
   <a class="btn primary" href="#booking">Book Your Haircut</a>
-  <a class="btn whatsapp"
-     href="https://wa.me/919304380290"
-     target="_blank" rel="noopener">Chat on WhatsApp</a>
+  <a class="btn whatsapp" href="https://wa.me/919304380290?text=Hello%20B.TECH-SALOON%20WALA%2C%20I%20want%20to%20book%20a%20haircut." target="_blank" rel="noopener">Chat on WhatsApp</a>
 </section>
-
 <section id="services">
-  <div class="section-title">
-    <h2>Our Haircut Services</h2>
-    <p>Choose your style at an affordable price.</p>
-  </div>
-
+  <div class="section-title"><h2>Our Haircut Services</h2><p>Choose your style at an affordable price.</p></div>
   <div class="grid">
     <article class="card">
-      <img class="hair-photo"
-        src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80"
-        alt="Modern barber haircut"
-        loading="lazy">
-      <div class="card-content">
-        <h3>Normal Haircut</h3>
-        <p>Clean, simple and fresh everyday style.</p>
-        <div class="price">₹120</div>
-        <button class="btn primary"
-          onclick="chooseService('normal')">Select Service</button>
-      </div>
+      <img class="hair-photo" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80" alt="Modern barber haircut" loading="lazy">
+      <div class="card-content"><h3>Normal Haircut</h3><p>Clean, simple and fresh everyday style.</p><div class="price">₹120</div><button class="btn primary" type="button" onclick="chooseService('normal')">Select Service</button></div>
     </article>
-
     <article class="card">
-      <img class="hair-photo"
-        src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80"
-        alt="Stylish haircut at a barber shop"
-        loading="lazy">
-      <div class="card-content">
-        <h3>Design Haircut</h3>
-        <p>Choose a stylish cut with a creative finish.</p>
-        <div class="price">₹150</div>
-        <button class="btn primary"
-          onclick="chooseService('design')">Select Service</button>
-      </div>
+      <img class="hair-photo" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80" alt="Stylish haircut at a barber shop" loading="lazy">
+      <div class="card-content"><h3>Design Haircut</h3><p>Choose a stylish cut with a creative finish.</p><div class="price">₹150</div><button class="btn primary" type="button" onclick="chooseService('design')">Select Service</button></div>
     </article>
   </div>
   <p class="note center">Photos are illustrative. Actual haircut styles may vary.</p>
 </section>
-
 <section id="booking">
-  <div class="section-title">
-    <h2>Book Your Haircut</h2>
-    <p>Enter your details to submit a booking request.</p>
-  </div>
-
+  <div class="section-title"><h2>Book Your Haircut</h2><p>Fill in your details and send your booking request on WhatsApp.</p></div>
   <form class="form-card" id="bookingForm">
-    <label for="customerName">Your Name *</label>
-    <input id="customerName" type="text" maxlength="70"
-      placeholder="Enter your name" required>
-
-    <label for="customerPhone">Your Mobile Number *</label>
-    <input id="customerPhone" type="tel" maxlength="15"
-      placeholder="Enter your phone number" required>
-
+    <label for="customerName">Your Name *</label><input id="customerName" type="text" maxlength="70" placeholder="Enter your name" required>
+    <label for="customerPhone">Your Mobile Number *</label><input id="customerPhone" type="tel" maxlength="15" placeholder="Enter your phone number" required>
     <label for="service">Choose Haircut *</label>
-    <select id="service" required>
-      <option value="normal">Normal Haircut — ₹120</option>
-      <option value="design">Design Haircut — ₹150</option>
-    </select>
-
-    <label for="bookingDate">Preferred Date *</label>
-    <input id="bookingDate" type="date" required>
-
+    <select id="service" required><option value="normal">Normal Haircut — ₹120</option><option value="design">Design Haircut — ₹150</option></select>
+    <label for="bookingDate">Preferred Date *</label><input id="bookingDate" type="date" required>
     <label for="bookingTime">Preferred Time *</label>
-    <select id="bookingTime" required>
-      <option value="">Select preferred time</option>
-      <option>10:00 AM</option>
-      <option>11:00 AM</option>
-      <option>12:00 PM</option>
-      <option>1:00 PM</option>
-      <option>2:00 PM</option>
-      <option>3:00 PM</option>
-      <option>4:00 PM</option>
-      <option>5:00 PM</option>
-      <option>6:00 PM</option>
-      <option>7:00 PM</option>
-      <option>8:00 PM</option>
-    </select>
-
-    <label for="bookingNotes">Additional Instructions (Optional)</label>
-    <textarea id="bookingNotes" rows="3" maxlength="300"
-      placeholder="Tell us your preferred style"></textarea>
-
+    <select id="bookingTime" required><option value="">Select preferred time</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option></select>
+    <label for="bookingNotes">Additional Instructions (Optional)</label><textarea id="bookingNotes" rows="3" maxlength="300" placeholder="Tell us your preferred style"></textarea>
     <div class="total">Total: <span id="totalPrice">₹120</span></div>
-
-    <button class="btn whatsapp" type="submit">
-      Submit Booking
-    </button>
-    <p class="note">
-      This sends a booking request, not an automatic confirmation.
-      Your appointment is confirmed only after the barber replies.
-    </p>
+    <button class="btn whatsapp" type="submit">Send Booking on WhatsApp</button>
+    <p class="note">WhatsApp will open with your booking details. Please press Send in WhatsApp. Your appointment is confirmed only after the barber replies.</p>
   </form>
 </section>
-
 <section id="qr">
-  <div class="section-title">
-    <h2>Scan & Visit Our Website</h2>
-    <p>Create a QR code for your published website.</p>
-  </div>
-
+  <div class="section-title"><h2>Scan & Visit Our Website</h2><p>Create a QR code for your published website.</p></div>
   <div class="qr-box card card-content">
-    <p>First publish your website, then paste its public URL below.</p>
-    <label for="websiteUrl">Published Website URL</label>
-    <input id="websiteUrl" type="url"
-      placeholder="https://your-website.example" >
-    <button class="btn primary" type="button" onclick="generateQR()">
-      Generate QR Code
-    </button>
-    <div>
-      <img id="qrImage" alt="QR code for your website">
-    </div>
-    <a id="qrDownload" class="btn secondary"
-      style="display:none" download="saloon-website-qr.png">
-      Download QR Code
-    </a>
-    <p class="note">
-      QR generation requires internet access and an external QR service.
-      Do not use your local file address; it will not work on other phones.
-    </p>
+    <p>Paste your public website URL below.</p>
+    <label for="websiteUrl">Published Website URL</label><input id="websiteUrl" type="url" placeholder="https://your-website.example">
+    <button class="btn primary" type="button" onclick="generateQR()">Generate QR Code</button>
+    <div><img id="qrImage" alt="QR code for your website"></div>
+    <a id="qrDownload" class="btn secondary" style="display:none" download="saloon-website-qr.png">Download QR Code</a>
+    <p class="note">QR generation requires internet access and an external QR service. Use your published website URL.</p>
   </div>
 </section>
-
 <section id="reviews">
-  <div class="section-title">
-    <h2>Customer Reviews</h2>
-    <p>Share your experience with B.TECH-SALOON WALA.</p>
-  </div>
-
+  <div class="section-title"><h2>Customer Reviews</h2><p>Share your experience with B.TECH-SALOON WALA.</p></div>
   <form class="form-card" id="reviewForm">
-    <label for="reviewName">Your Name</label>
-    <input id="reviewName" maxlength="50"
-      placeholder="Enter your name" required>
-
-    <label for="reviewRating">Your Rating</label>
-    <select id="reviewRating" required>
-      <option value="5">★★★★★ — Excellent</option>
-      <option value="4">★★★★ — Very Good</option>
-      <option value="3">★★★ — Good</option>
-      <option value="2">★★ — Fair</option>
-      <option value="1">★ — Needs Improvement</option>
-    </select>
-
-    <label for="reviewText">Your Feedback</label>
-    <textarea id="reviewText" rows="3" maxlength="400"
-      placeholder="Write your honest feedback" required></textarea>
-
+    <label for="reviewName">Your Name</label><input id="reviewName" maxlength="50" placeholder="Enter your name" required>
+    <label for="reviewRating">Your Rating</label><select id="reviewRating" required><option value="5">★★★★★ — Excellent</option><option value="4">★★★★ — Very Good</option><option value="3">★★★ — Good</option><option value="2">★★ — Fair</option><option value="1">★ — Needs Improvement</option></select>
+    <label for="reviewText">Your Feedback</label><textarea id="reviewText" rows="3" maxlength="400" placeholder="Write your honest feedback" required></textarea>
     <button class="btn primary" type="submit">Add My Review</button>
-    <p class="note">
-      Reviews are stored only in this browser on this device.
-      They are not automatically shared with other visitors.
-    </p>
+    <p class="note">Reviews are stored only in this browser on this device. They are not automatically shared with other visitors.</p>
   </form>
-
-  <div id="reviewList" class="card"
-    style="max-width:650px;margin:25px auto;padding:10px">
-    <p class="center">No reviews yet. Be the first to share feedback!</p>
-  </div>
+  <div id="reviewList" class="card" style="max-width:650px;margin:25px auto;padding:10px"><p class="center">No reviews yet. Be the first to share feedback!</p></div>
 </section>
-
 <section id="location">
-  <div class="section-title">
-    <h2>Find Us</h2>
-    <p>Hostel Room No. 177</p>
-    <p>SRM Hostel, S Block, Phase 2</p>
-  </div>
-
+  <div class="section-title"><h2>Find Us</h2><p>Hostel Room No. 177</p><p>SRM Hostel, S Block, Phase 2</p></div>
   <div style="max-width:900px;margin:auto">
-    <iframe class="map-frame"
-      title="Map search for SRM hostel S Block Phase 2"
-      src="https://maps.google.com/maps?q=SRM%20hostel%20S%20Block%20Phase%202%20Tiruchirappalli&t=&z=15&ie=UTF8&iwloc=&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-    <p class="center">
-      <a class="btn primary"
-        href="https://www.google.com/maps/search/?api=1&query=SRM+hostel+S+Block+Phase+2+Tiruchirappalli"
-        target="_blank" rel="noopener">Open Google Maps</a>
-    </p>
-    <p class="note center">
-      This is a map search, not a verified room pin.
-      Confirm the exact hostel location before sharing with customers.
-    </p>
+    <iframe class="map-frame" title="Map search for SRM hostel S Block Phase 2" src="https://maps.google.com/maps?q=SRM%20hostel%20S%20Block%20Phase%202%20Tiruchirappalli&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p class="center"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=SRM+hostel+S+Block+Phase+2+Tiruchirappalli" target="_blank" rel="noopener">Open Google Maps</a></p>
+    <p class="note center">This is a map search, not a verified room pin. Confirm the exact hostel location before sharing with customers.</p>
   </div>
 </section>
 </main>
-
 <footer>
-  <p><strong>✂ B.TECH-SALOON WALA</strong></p>
-  <p>Made with ❤️ for SRM Hostel Students</p>
-  <p>Room 177 | WhatsApp: 9304380290</p>
-  <p>© <span id="year"></span> B.TECH-SALOON WALA</p>
+  <p><strong>✂ B.TECH-SALOON WALA</strong></p><p>Made with ❤️ for SRM Hostel Students</p><p>Room 177 | WhatsApp: 9304380290</p><p>© <span id="year"></span> B.TECH-SALOON WALA</p>
 </footer>
-
 <script>
 const WHATSAPP_NUMBER = "919304380290";
-
-const prices = {
-  normal: 120,
-  design: 150
-};
-
-const serviceNames = {
-  normal: "Normal Haircut",
-  design: "Design Haircut"
-};
-
+const prices = {normal:120, design:150};
+const serviceNames = {normal:"Normal Haircut", design:"Design Haircut"};
 const serviceSelect = document.getElementById("service");
 const totalPrice = document.getElementById("totalPrice");
 const bookingDate = document.getElementById("bookingDate");
+document.getElementById("year").textContent = new Date().getFullYear();
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-function setMinimumDate() {
+function setMinimumDate(){
   const now = new Date();
-  const localDate = new Date(
-    now.getTime() - now.getTimezoneOffset() * 60000
-  ).toISOString().slice(0, 10);
-
-  bookingDate.min = localDate;
+  bookingDate.min = new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().slice(0,10);
 }
 setMinimumDate();
-
-function updatePrice() {
-  totalPrice.textContent = "₹" + prices[serviceSelect.value];
-}
-serviceSelect.addEventListener("change", updatePrice);
-
-function chooseService(service) {
-  serviceSelect.value = service;
-  updatePrice();
-  document.getElementById("booking").scrollIntoView({
-    behavior: "smooth"
-  });
+function updatePrice(){totalPrice.textContent = "₹"+prices[serviceSelect.value];}
+serviceSelect.addEventListener("change",updatePrice);
+function chooseService(service){
+  serviceSelect.value=service;updatePrice();
+  document.getElementById("booking").scrollIntoView({behavior:"smooth"});
 }
 
-document.getElementById("bookingForm").addEventListener(
-  "submit", async function(event) {
-    event.preventDefault();
+document.getElementById("bookingForm").addEventListener("submit",function(event){
+  event.preventDefault();
+  const name=document.getElementById("customerName").value.trim();
+  const phone=document.getElementById("customerPhone").value.trim();
+  const service=serviceSelect.value;
+  const date=bookingDate.value;
+  const time=document.getElementById("bookingTime").value;
+  const notes=document.getElementById("bookingNotes").value.trim();
+  if(!name||!phone||!date||!time){alert("Please fill in all required fields.");return;}
+  if(!/^[0-9+\-\s()]{7,15}$/.test(phone)){alert("Please enter a valid mobile number.");return;}
+  if(date<bookingDate.min){alert("Please choose today or a future date.");return;}
 
-    const name = document.getElementById("customerName").value.trim();
-    const phone = document.getElementById("customerPhone").value.trim();
-    const service = serviceSelect.value;
-    const date = bookingDate.value;
-    const time = document.getElementById("bookingTime").value;
-    const notes = document.getElementById("bookingNotes").value.trim();
+  const message=[
+    "Hello B.TECH-SALOON WALA! I want to book a haircut.",
+    "",
+    "Name: "+name,
+    "Customer mobile: "+phone,
+    "Service: "+serviceNames[service],
+    "Price: ₹"+prices[service],
+    "Preferred date: "+date,
+    "Preferred time: "+time,
+    "Instructions: "+(notes||"None"),
+    "",
+    "Please confirm my appointment."
+  ].join("\n");
+  const whatsappURL="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message);
+  window.open(whatsappURL,"_blank","noopener");
+});
 
-    if (!name || !phone || !date || !time) {
-      alert("Please fill in all required fields.");
-      return;
-    }
-
-    if (!/^[0-9+\-\s()]{7,15}$/.test(phone)) {
-      alert("Please enter a valid mobile number.");
-      return;
-    }
-
-    if (date < bookingDate.min) {
-      alert("Please choose today or a future date.");
-      return;
-    }
-
-    const submitButton = document.querySelector('#bookingForm button[type="submit"]');
-    const originalButtonText = submitButton ? submitButton.textContent : "Submit Booking";
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = "Submitting...";
-    }
-
-    try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbzuhRYz0hxwjB0Hy1Qqi6M5xHVZCvxLKZrd1GRg7bProcujYKdtDKOaSHawN-DF-W_bUA/exec",
-        {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify({
-            name: name,
-            phone: phone,
-            service: serviceNames[service],
-            date: date,
-            time: time,
-            notes: notes
-          })
-        }
-      );
-
-      alert("Booking request sent. Please check the Google Sheet to confirm it was saved.");
-      document.getElementById("bookingForm").reset();
-      updatePrice();
-      setMinimumDate();
-    } catch (error) {
-      alert("Could not send the booking request. Please try again.");
-    } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = originalButtonText;
-      }
-    }
-  }
-);
-
-function generateQR() {
-  const input = document.getElementById("websiteUrl").value.trim();
-  const qrImage = document.getElementById("qrImage");
-  const downloadLink = document.getElementById("qrDownload");
-
+function generateQR(){
+  const input=document.getElementById("websiteUrl").value.trim();
+  const qrImage=document.getElementById("qrImage");
+  const downloadLink=document.getElementById("qrDownload");
   let url;
-  try {
-    url = new URL(input);
-  } catch {
-    alert("Please enter a valid published website URL.");
-    return;
-  }
-
-  if (url.protocol !== "https:" && url.protocol !== "http:") {
-    alert("Please use a website URL starting with http:// or https://");
-    return;
-  }
-
-  const qrUrl =
-    "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" +
-    encodeURIComponent(url.href);
-
-  qrImage.onload = function() {
-    qrImage.style.display = "block";
-    downloadLink.href = qrUrl;
-    downloadLink.style.display = "inline-block";
-  };
-
-  qrImage.onerror = function() {
-    alert("QR could not load. Check your internet connection and try again.");
-  };
-
-  qrImage.src = qrUrl;
+  try{url=new URL(input);}catch{alert("Please enter a valid published website URL.");return;}
+  if(url.protocol!=="https:"&&url.protocol!=="http:"){alert("Please use a website URL starting with http:// or https://");return;}
+  const qrUrl="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="+encodeURIComponent(url.href);
+  qrImage.onload=function(){qrImage.style.display="block";downloadLink.href=qrUrl;downloadLink.style.display="inline-block";};
+  qrImage.onerror=function(){alert("QR could not load. Check your internet connection and try again.");};
+  qrImage.src=qrUrl;
 }
 
-const REVIEW_STORAGE_KEY = "btSaloonReviews";
-
-function getReviews() {
-  try {
-    return JSON.parse(
-      localStorage.getItem(REVIEW_STORAGE_KEY) || "[]"
-    );
-  } catch {
-    return [];
-  }
-}
-
-function renderReviews() {
-  const list = document.getElementById("reviewList");
-  list.replaceChildren();
-
-  const reviews = getReviews();
-
-  if (!reviews.length) {
-    const empty = document.createElement("p");
-    empty.className = "center";
-    empty.textContent =
-      "No reviews yet. Be the first to share feedback!";
-    list.appendChild(empty);
-    return;
-  }
-
-  reviews.slice().reverse().forEach(review => {
-    const item = document.createElement("article");
-    item.className = "review";
-
-    const name = document.createElement("strong");
-    name.textContent = review.name;
-
-    const stars = document.createElement("div");
-    stars.className = "stars";
-    stars.textContent =
-      "★".repeat(review.rating) + "☆".repeat(5 - review.rating);
-
-    const feedback = document.createElement("p");
-    feedback.textContent = review.text;
-
-    item.append(name, stars, feedback);
-    list.appendChild(item);
+const REVIEW_STORAGE_KEY="btSaloonReviews";
+function getReviews(){try{return JSON.parse(localStorage.getItem(REVIEW_STORAGE_KEY)||"[]");}catch{return [];}}
+function renderReviews(){
+  const list=document.getElementById("reviewList");list.replaceChildren();
+  const reviews=getReviews();
+  if(!reviews.length){const empty=document.createElement("p");empty.className="center";empty.textContent="No reviews yet. Be the first to share feedback!";list.appendChild(empty);return;}
+  reviews.slice().reverse().forEach(review=>{
+    const item=document.createElement("article");item.className="review";
+    const name=document.createElement("strong");name.textContent=review.name;
+    const stars=document.createElement("div");stars.className="stars";stars.textContent="★".repeat(review.rating)+"☆".repeat(5-review.rating);
+    const feedback=document.createElement("p");feedback.textContent=review.text;
+    item.append(name,stars,feedback);list.appendChild(item);
   });
 }
-
-document.getElementById("reviewForm").addEventListener(
-  "submit", function(event) {
-    event.preventDefault();
-
-    const name = document.getElementById("reviewName")
-      .value.trim();
-    const rating = Number(
-      document.getElementById("reviewRating").value
-    );
-    const feedback = document.getElementById("reviewText")
-      .value.trim();
-
-    if (!name || !feedback) {
-      alert("Please enter your name and feedback.");
-      return;
-    }
-
-    const reviews = getReviews();
-    reviews.push({
-      name: name,
-      rating: rating,
-      text: feedback
-    });
-
-    try {
-      localStorage.setItem(
-        REVIEW_STORAGE_KEY, JSON.stringify(reviews)
-      );
-    } catch {
-      alert("Could not save review in this browser.");
-      return;
-    }
-
-    renderReviews();
-    this.reset();
-    alert("Your review has been saved on this device.");
-  }
-);
-
+document.getElementById("reviewForm").addEventListener("submit",function(event){
+  event.preventDefault();
+  const name=document.getElementById("reviewName").value.trim();
+  const rating=Number(document.getElementById("reviewRating").value);
+  const feedback=document.getElementById("reviewText").value.trim();
+  if(!name||!feedback){alert("Please enter your name and feedback.");return;}
+  const reviews=getReviews();reviews.push({name:name,rating:rating,text:feedback});
+  try{localStorage.setItem(REVIEW_STORAGE_KEY,JSON.stringify(reviews));}catch{alert("Could not save review in this browser.");return;}
+  renderReviews();this.reset();alert("Your review has been saved on this device.");
+});
 renderReviews();
 </script>
 </body>
